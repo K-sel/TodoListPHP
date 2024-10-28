@@ -13,7 +13,7 @@ define('DB_PASS', 'Admin1115.1$');
 define('DB_NAME', 'todolist');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
-
+echo "les modifs git ont passé";
 $db = new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME, DB_USER, DB_PASS);
 $items = array();
 
