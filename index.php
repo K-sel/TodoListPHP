@@ -7,7 +7,7 @@
 // application at "http://localhost:8888", then BASE_URL should be "/".
 
 // DbManager connection parameters.
-// DB PW have been updated 
+// DB PW have been updated from test
 
 define('BASE_URL', getenv('TODOLIST_BASE_URL') ?: '/');
 define('DB_USER',getenv('TODOLIST_DB_USER'));
