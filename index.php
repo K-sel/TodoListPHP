@@ -7,6 +7,8 @@
 // application at "http://localhost:8888", then BASE_URL should be "/".
 
 // DbManager connection parameters.
+// DB PW have been updated 
+
 define('BASE_URL', getenv('TODOLIST_BASE_URL') ?: '/');
 define('DB_USER',getenv('TODOLIST_DB_USER'));
 define('DB_PASS', getenv('TODOLIST_DB_PASS'));
@@ -24,7 +26,7 @@ if (isset($_POST['action'])) {
      * Insert a new task into the database, then redirect to the base URL.
      */
     case 'new':
-      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING); //Ajout du filtre
+      $title = filter_input(INPUT_POST, 'title', FILTER_DEFAULT); //Ajout du filtre
       if ($title && $title !== '') {
         $insertQuery = 'INSERT INTO todo VALUES(NULL, \''.$title.'\', FALSE, CURRENT_TIMESTAMP)';
         if (!$db->query($insertQuery)) {
